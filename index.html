@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Delight Coffee Café | Menu</title>
+
+    <style>
+      /* ------------ FONTS ------------ */
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Poppins, sans-serif;
+        background: linear-gradient(135deg, #ffe0f7, #d6e6ff, #d7ffd9);
+        background-size: 350% 350%;
+        animation: bgmove 14s infinite alternate;
+      }
+
+      @keyframes bgmove {
+        0% {
+          background-position: left;
+        }
+        100% {
+          background-position: right;
+        }
+      }
+
+      header {
+        text-align: center;
+        padding: 25px 10px;
+      }
+
+      header h1 {
+        font-size: 34px;
+        color: #333;
+        text-shadow: 0px 0px 10px #ff8ee3;
+        margin: 0;
+      }
+
+      header p {
+        font-size: 14px;
+        color: #555;
+        margin-top: 8px;
+        letter-spacing: 0.5px;
+      }
+
+      /* ------------ MENU CARD ------------ */
+      .menu-box {
+        max-width: 95%;
+        margin: 18px auto;
+        background: rgba(255, 255, 255, 0.35);
+        padding: 18px;
+        border-radius: 18px;
+        backdrop-filter: blur(8px);
+        box-shadow: 0 0 22px rgba(0, 0, 0, 0.15);
+        animation: float 4s infinite alternate ease-in-out;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        100% {
+          transform: translateY(10px);
+        }
+      }
+
+      .menu-box h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        color: #222;
+        text-shadow: 0 0 6px #ff9ee5;
+      }
+
+      /* ------------ ITEM LIST ------------ */
+      ul {
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        list-style: none;
+        padding: 12px;
+        margin: 10px 0;
+        background: rgba(255, 255, 255, 0.45);
+        border-radius: 12px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: 0.25s;
+        animation: reveal 0.7s ease forwards;
+        opacity: 0;
+      }
+
+      @keyframes reveal {
+        from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      li:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 15px #ffb5f7;
+      }
+
+      li::before {
+        content: "✦";
+        position: absolute;
+        left: 8px;
+        font-size: 18px;
+        opacity: 0.25;
+      }
+
+      /* ------------ HAPPY MESSAGE ------------ */
+      #happyMessage {
+        text-align: center;
+        padding: 18px;
+        font-size: 16px;
+        color: #333;
+        font-weight: 600;
+        margin-top: 20px;
+        text-shadow: 0 0 5px #ffa4ef;
+      }
+
+      /* ------------ FOOTER ------------ */
+      footer {
+        margin-top: 30px;
+        padding: 15px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(6px);
+        font-size: 15px;
+      }
+
+      .footer-link {
+        color: #ea00ff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .hook {
+        font-size: 14px;
+        margin-top: 8px;
+        color: #444;
+      }
+
+      /* MADE BY */
+      #creator {
+        position: fixed;
+        right: 10px;
+        bottom: 8px;
+        font-size: 12px;
+        font-weight: 600;
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Delight Coffee Café</h1>
+      <p>College Vibes • Trendy • Aesthetic • Mobile Friendly</p>
+    </header>
+
+    <!-- ---------------- FULL MENU START ---------------- -->
+    <!-- (ALL MENU SECTIONS SAME AS BEFORE — NOT REMOVED) -->
+
+    <!-- PIZZA -->
+    <div class="menu-box">
+      <h2>🍕 Pizza</h2>
+      <ul>
+        <li><span>Margherita</span><span>89 / 129 / 109 / 159</span></li>
+        <li><span>Onion</span><span>89 / 129 / 109 / 159</span></li>
+        <li><span>Corn</span><span>89 / 129 / 109 / 159</span></li>
+        <li><span>Capsicum</span><span>89 / 129 / 109 / 159</span></li>
+        <li><span>CTC</span><span>99 / 149 / 119 / 169</span></li>
+        <li><span>Paneer</span><span>129 / 169 / 149 / 199</span></li>
+        <li><span>Paneer Onion</span><span>139 / 179 / 159 / 209</span></li>
+        <li><span>Peppy Paneer</span><span>149 / 189 / 169 / 219</span></li>
+        <li><span>Garden Fresh</span><span>159 / 199 / 179 / 229</span></li>
+        <li><span>DCC Special</span><span>199 / 249 / 219 / 279</span></li>
+      </ul>
+    </div>
+
+    <!-- CHAAT -->
+    <div class="menu-box">
+      <h2>🌮 Chaat</h2>
+      <ul>
+        <li><span>American Sweet Corn</span><span>49</span></li>
+        <li><span>Bhel Puri</span><span>49</span></li>
+        <li><span>Kurkure Chaat</span><span>49</span></li>
+        <li><span>Bingo Chaat</span><span>49</span></li>
+        <li><span>Cheese Bingo Chaat</span><span>59</span></li>
+        <li><span>Masala Nachos</span><span>69</span></li>
+        <li><span>Cheese Nachos</span><span>79</span></li>
+      </ul>
+    </div>
+
+    <!-- FRIES -->
+    <div class="menu-box">
+      <h2>🍟 Fries</h2>
+      <ul>
+        <li><span>French Fries</span><span>59</span></li>
+        <li><span>Peri Peri Fries</span><span>69</span></li>
+        <li><span>Cheese Fries</span><span>79</span></li>
+      </ul>
+    </div>
+
+    <!-- SANDWICHES -->
+    <div class="menu-box">
+      <h2>🥪 Sandwiches</h2>
+      <ul>
+        <li><span>Peanut Butter Sandwich</span><span>49</span></li>
+        <li><span>Bombay Sandwich</span><span>49</span></li>
+        <li><span>Veg Sandwich (Grilled)</span><span>59</span></li>
+        <li><span>Masala Sandwich (Grilled)</span><span>59</span></li>
+        <li><span>Veg Cheese Grilled Sandwich</span><span>69</span></li>
+        <li><span>Paneer Sandwich</span><span>79</span></li>
+        <li><span>Paneer Cheese Sandwich</span><span>89</span></li>
+        <li><span>DCC Special Sandwich</span><span>99</span></li>
+      </ul>
+    </div>
+
+    <!-- Maggie -->
+    <div class="menu-box">
+      <h2>🍜 Maggie</h2>
+      <ul>
+        <li><span>Plain Maggie</span><span>39</span></li>
+        <li><span>Veg Maggie</span><span>49</span></li>
+        <li><span>Cheese Maggie</span><span>69</span></li>
+        <li><span>Peri Peri Maggie</span><span>79</span></li>
+        <li><span>Cheese Corn Maggie</span><span>79</span></li>
+        <li><span>Paneer Veg Maggie</span><span>89</span></li>
+      </ul>
+    </div>
+
+    <!-- PASTA -->
+    <div class="menu-box">
+      <h2>🍝 Pasta</h2>
+      <ul>
+        <li><span>Red Sauce Pasta</span><span>99</span></li>
+        <li><span>White Sauce Pasta</span><span>119</span></li>
+        <li><span>Pink Sauce Pasta</span><span>129</span></li>
+      </ul>
+    </div>
+
+    <!-- BURGER -->
+    <div class="menu-box">
+      <h2>🍔 Burger</h2>
+      <ul>
+        <li><span>Aloo Tikki Burger</span><span>49</span></li>
+        <li><span>Veg Tikki Burger</span><span>59</span></li>
+        <li><span>Double Aloo Tikki Burger</span><span>69</span></li>
+        <li><span>Cheese Burger</span><span>79</span></li>
+        <li><span>DCC Special Burger</span><span>89</span></li>
+      </ul>
+    </div>
+
+    <!-- BROWNIES -->
+    <div class="menu-box">
+      <h2>🍰 Brownie</h2>
+      <ul>
+        <li><span>Classic Brownie</span><span>49</span></li>
+        <li><span>Choco Lava Cake</span><span>59</span></li>
+        <li><span>Brownie with Ice Cream</span><span>69</span></li>
+      </ul>
+    </div>
+
+    <!-- ICE CREAM -->
+    <div class="menu-box">
+      <h2>🍨 Ice Cream</h2>
+      <ul>
+        <li><span>Vanilla</span><span>29</span></li>
+        <li><span>Chocolate</span><span>39</span></li>
+        <li><span>Butter Scotch</span><span>39</span></li>
+      </ul>
+    </div>
+
+    <!-- SHAKES -->
+    <div class="menu-box">
+      <h2>🥤 Shakes</h2>
+      <ul>
+        <li><span>Vanilla Shake</span><span>69</span></li>
+        <li><span>Strawberry Shake</span><span>69</span></li>
+        <li><span>Chocolate Shake</span><span>79</span></li>
+        <li><span>Butter Scotch Shake</span><span>79</span></li>
+        <li><span>Oreo Shake</span><span>89</span></li>
+        <li><span>Kitkat Shake</span><span>89</span></li>
+        <li><span>Paan Shake</span><span>89</span></li>
+        <li><span>Rose Gulkand Shake</span><span>89</span></li>
+        <li><span>Kesar Pista Shake</span><span>99</span></li>
+        <li><span>Black Current Shake</span><span>99</span></li>
+      </ul>
+    </div>
+
+    <!-- SOUPS -->
+    <div class="menu-box">
+      <h2>🥣 Soups</h2>
+      <ul>
+        <li><span>Tomato Soup</span><span>35</span></li>
+        <li><span>Manchow Soup</span><span>39</span></li>
+        <li><span>Corn Soup</span><span>39</span></li>
+      </ul>
+    </div>
+
+    <!-- ROLLS -->
+    <div class="menu-box">
+      <h2>🌯 Rolls</h2>
+      <ul>
+        <li><span>Spring Roll (6 pc)</span><span>79</span></li>
+        <li><span>Cheese Roll (6 pc)</span><span>89</span></li>
+      </ul>
+    </div>
+
+    <!-- CRUNCHIES -->
+    <div class="menu-box">
+      <h2>🍘 Crunchies</h2>
+      <ul>
+        <li><span>Potato Nuggets (6 pc)</span><span>59</span></li>
+        <li><span>Cheese Corn Toast</span><span>79</span></li>
+      </ul>
+    </div>
+
+    <!-- GARLIC BREAD -->
+    <div class="menu-box">
+      <h2>🍞 Garlic Bread</h2>
+      <ul>
+        <li><span>Stuffed Garlic Bread</span><span>99</span></li>
+        <li><span>OTC Garlic Bread</span><span>99</span></li>
+      </ul>
+    </div>
+
+    <!-- DABELI -->
+    <div class="menu-box">
+      <h2>🍔 Dabeli</h2>
+      <ul>
+        <li><span>Garam Dabeli</span><span>35</span></li>
+        <li><span>DCC Special Dabeli</span><span>49</span></li>
+      </ul>
+    </div>
+
+    <!-- PAV ITEMS -->
+    <div class="menu-box">
+      <h2>🥪 Pav Items</h2>
+      <ul>
+        <li><span>Bun Maska</span><span>25</span></li>
+        <li><span>Vada Pav</span><span>35</span></li>
+        <li><span>Butter Vada Pav</span><span>45</span></li>
+        <li><span>Peri-Peri Vada Pav</span><span>49</span></li>
+        <li><span>DCC Special Vada Pav</span><span>59</span></li>
+        <li><span>Pav Bhaji</span><span>79</span></li>
+      </ul>
+    </div>
+
+    <!-- ICE TEA -->
+    <div class="menu-box">
+      <h2>🧊 Ice Tea</h2>
+      <ul>
+        <li><span>Lemon Ice Tea</span><span>59</span></li>
+        <li><span>Strawberry Ice Tea</span><span>69</span></li>
+        <li><span>Watermelon Ice Tea</span><span>69</span></li>
+        <li><span>Peach Ice Tea</span><span>69</span></li>
+      </ul>
+    </div>
+
+    <!-- MOCKTAILS -->
+    <div class="menu-box">
+      <h2>🍹 Mocktails</h2>
+      <ul>
+        <li><span>Lemonade</span><span>49</span></li>
+        <li><span>Virgin Mojito</span><span>49</span></li>
+        <li><span>Blue Lagoon</span><span>49</span></li>
+        <li><span>Watermelon Mocktail</span><span>49</span></li>
+        <li><span>Strawberry Mojito</span><span>49</span></li>
+      </ul>
+    </div>
+
+    <!-- RANDOM MSG -->
+    <div id="happyMessage"></div>
+
+    <footer>
+      <p>
+        Instagram:
+        <a
+          class="footer-link"
+          href="https://instagram.com/delightcoffeecafe"
+          target="_blank"
+        >
+          @delightcoffeecafe</a
+        >
+      </p>
+
+      <!-- 🔥 REPLACED PRIVATE LINK WITH YOUR LIVE URL -->
+      <p>
+        <a
+          class="footer-link"
+          href="https://lambent-brigadeiros-941332.netlify.app/"
+          target="_blank"
+        >
+          ✨ Private Heart-Share Room ✨
+        </a>
+      </p>
+
+      <p class="hook">
+        💌 “Kabhi kabhi dil ki baat bol dene se zindagi हल्की लगने लगती है… बस
+        click karo, aur sirf apne दिल को सुनो।”
+      </p>
+    </footer>
+
+    <div id="creator">Made by V.R</div>
+
+    <script>
+      const messages = [
+        "😄 Aaj coffee bhi tumhari smile jaise sweet lag rahi hai!",
+        "😉 Tum aaye ho… matlab café ka vibe automatic premium ho gaya!",
+        "☕ Dil bole coffee… par dimag bole tum!",
+        "😂 Cup bolta hai — ‘Mujhe nhi, usko dekh ke muskura!’",
+        "💘 Tumhara favourite item kya hai? …Coffee ya main? 😉",
+        "✨ Aaj ka rule: Smile mandatory, tension optional!",
+        "😌 Tum ho to coffee bhi extra warm lagti hai!",
+        "🤭 Café ka spoon bhi tumhe dekh ke blush kar raha tha!",
+        "🤍 Coffee thodi kadvi ho sakti hai… tum nahi!",
+        "🔥 Tum ho to menu bhi hot lagta hai!",
+        "😎 Aaj vibe cool है… par tum उससे भी cooler हो!",
+        "🌟 Tumhara phone glow nahi… tumhari presence glow कर रही है!",
+        "🤣 Barista bole – ‘Unki order जल्दी banana, वो cute लग रहे हैं!’",
+        "💫 Tumhari eyes + café lights = Perfect aesthetic moment",
+        "🥰 Coffee ka love letter — ‘Please usko bolna mujhe everyday piyo!’",
+        "🤌 Tum aaye… café ka mood bhi ‘uff’ हो गया!",
+        "😍 Tumko dekh ke latte art भी खुद बन जाता!",
+        "😂 Warning: Tumhe dekhne से heart में extra caffeine भर जाता है!",
+        "😉 Tumhara vibe… café ki music playlist से भी better!",
+        "💖 Aaj ka secret message: Tum café’s favourite person हो!",
+        "🔥 Tum aaye = Mood upgrade activated!",
+        "😄 Coffee में jitna maza… utna hi tumhari smile में!",
+        "😉 Menu ke prices fix हैं — par tumhara charm unlimited!",
+        "💞 Tumhare bina café bhi अधूरा लगता है!",
+      ];
+
+      document.getElementById("happyMessage").innerText =
+        messages[Math.floor(Math.random() * messages.length)];
+    </script>
+  </body>
+</html>
